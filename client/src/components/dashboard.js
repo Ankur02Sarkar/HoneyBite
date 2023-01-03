@@ -42,7 +42,10 @@ const Dashboard = () => {
     // axios.post('http://localhost:5000/usercrypto', { walletAddress: dummywallet }).then((res) => {
     //   console.log(res);
     // })
-    setUser({ walletAddress: dummywallet })
+    useEffect(() => {
+      setUser({ walletAddress: dummywallet })
+    }, [])
+    
     
     localStorage.setItem('userCrypto', JSON.stringify(User))
     console.log(User);
